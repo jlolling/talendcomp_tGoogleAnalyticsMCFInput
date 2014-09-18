@@ -1,0 +1,33 @@
+<%@ jet 
+	imports="
+		org.talend.core.model.process.INode 
+		org.talend.core.model.process.ElementParameterParser 
+		org.talend.core.model.metadata.IMetadataTable 
+		org.talend.core.model.metadata.IMetadataColumn 
+		org.talend.core.model.process.IConnection
+		org.talend.core.model.process.IConnectionCategory
+		org.talend.designer.codegen.config.CodeGeneratorArgument
+		org.talend.core.model.metadata.types.JavaTypesManager
+		org.talend.core.model.metadata.types.JavaType
+		java.util.List 
+    	java.util.Map		
+	" 
+%>
+<% 
+    CodeGeneratorArgument codeGenArgument = (CodeGeneratorArgument) argument;
+    INode node = (INode)codeGenArgument.getArgument();
+    String cid = node.getUniqueName(); %>
+    
+	   countLines_<%=cid%>++;
+	} // close while from output connection of <%=cid%> 
+	globalMap.put("<%=cid%>_NB_LINE", countLines_<%=cid%>); 
+	globalMap.put("<%=cid%>_TOTAL_AFFECTED_ROWS", <%=cid%>.getTotalAffectedRows());
+	boolean <%=cid%>_isSampled = <%=cid%>.containsSampledData();
+	globalMap.put("<%=cid%>_CONTAINS_SAMPLED_DATA", <%=cid%>_isSampled);
+	if (<%=cid%>_isSampled) {
+		globalMap.put("<%=cid%>_SAMPLE_SIZE", <%=cid%>.getSampleSize());
+		globalMap.put("<%=cid%>_SAMPLE_SPACE", <%=cid%>.getSampleSpace());
+	} else {
+		globalMap.remove("<%=cid%>_SAMPLE_SIZE");
+		globalMap.remove("<%=cid%>_SAMPLE_SPACE");
+	}
