@@ -27,9 +27,9 @@
     </dependency>
   </dependencies>
   <properties>
-    <project.api.version>v3-rev81-1.17.0-rc</project.api.version>
-    <project.http.version>1.17.0-rc</project.http.version>
-    <project.oauth.version>1.17.0-rc</project.oauth.version>
+    <project.api.version>v3-rev100-1.19.0</project.api.version>
+    <project.http.version>1.19.0</project.http.version>
+    <project.oauth.version>1.19.0</project.oauth.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <organization>
@@ -58,5 +58,5 @@
       </plugin>
     </plugins>
   </build>
-  <version>1.7</version>
+  <version>1.8</version>
 </project>
