@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <COMPONENT>
-	<HEADER PLATEFORM="ALL" SERIAL="" VERSION="1.7" STATUS="PROD"
-		COMPATIBILITY="ALL" AUTHOR="cimt ag" RELEASE_DATE="20140130A"
+	<HEADER PLATEFORM="ALL" SERIAL="" VERSION="1.8" STATUS="PROD"
+		COMPATIBILITY="ALL" AUTHOR="cimt ag" RELEASE_DATE="20140918A"
 		STARTABLE="true">
 		<SIGNATURE />
 	</HEADER>
@@ -91,7 +91,7 @@
 	<CODEGENERATION>
 		<IMPORTS>
 			<IMPORT NAME="Google Analytics"
-				MODULE="cimt.talendcomp.gamfc-1.7-jar-with-dependencies.jar"
+				MODULE="cimt.talendcomp.gamfc-1.8-jar-with-dependencies.jar"
 				REQUIRED="true" />
 		</IMPORTS>
 	</CODEGENERATION>
