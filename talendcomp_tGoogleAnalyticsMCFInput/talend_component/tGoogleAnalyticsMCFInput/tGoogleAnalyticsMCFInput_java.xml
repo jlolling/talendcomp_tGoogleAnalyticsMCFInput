@@ -90,8 +90,8 @@
 	</ADVANCED_PARAMETERS>
 	<CODEGENERATION>
 		<IMPORTS>
-			<IMPORT NAME="Google Analytics"
-				MODULE="cimt.talendcomp.gamfc-1.8-jar-with-dependencies.jar"
+			<IMPORT NAME="Google_AnalyticsMCF"
+				MODULE="jlo.talendcomp.gamfc-1.9-jar-with-dependencies.jar"
 				REQUIRED="true" />
 		</IMPORTS>
 	</CODEGENERATION>

@@ -5,12 +5,9 @@
 		org.talend.core.model.metadata.IMetadataTable 
 		org.talend.core.model.metadata.IMetadataColumn 
 		org.talend.core.model.process.IConnection
-		org.talend.core.model.process.IConnectionCategory
 		org.talend.designer.codegen.config.CodeGeneratorArgument
 		org.talend.core.model.metadata.types.JavaTypesManager
-		org.talend.core.model.metadata.types.JavaType
 		java.util.List 
-    	java.util.Map		
 	" 
 %>
 <% 
@@ -52,11 +49,11 @@
 %>
     // start creating client
 	<% if ("true".equals(keepClient)) {%>
-	de.cimt.talendcomp.googleanalytics.GoogleAnalyticsMCFInput <%=cid%> = de.cimt.talendcomp.googleanalytics.GoogleAnalyticsMCFInput.getFromCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName);
+	de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput <%=cid%> = de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput.getFromCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName);
 	if (<%=cid%> == null) {
-		<%=cid%> = new de.cimt.talendcomp.googleanalytics.GoogleAnalyticsMCFInput();
+		<%=cid%> = new de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput();
 	<% } else {%>
-	de.cimt.talendcomp.googleanalytics.GoogleAnalyticsMCFInput <%=cid%> = new de.cimt.talendcomp.googleanalytics.GoogleAnalyticsMCFInput();
+	de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput <%=cid%> = new de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput();
 	<% }%>
 	<% if (applicationName != null && applicationName.trim().isEmpty() == false) {%>
 		<%=cid%>.setApplicationName(<%=applicationName%>);
@@ -83,7 +80,7 @@
 		}
 		globalMap.put("<%=cid%>", <%=cid%>);
 	<% if ("true".equals(keepClient)) {%>
-		de.cimt.talendcomp.googleanalytics.GoogleAnalyticsMCFInput.putIntoCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName, <%=cid%>);
+		de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput.putIntoCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName, <%=cid%>);
 	}
 	<% }%>
 	// setup query
@@ -151,7 +148,7 @@
 					<%=conn.getName()%>.<%=col.getLabel()%> = <%=cid%>_value_<%=index%>;
 <%              } else { %>
 	    	        try {
-						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.cimt.talendcomp.googleanalytics.Util.convertToDatatype(
+						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.googleanalytics.Util.convertToDatatype(
 								<%=cid%>_value_<%=index%>, 
 								"<%=col.getTalendType().substring(3)%>", 
 								<%=((col.getPattern() != null && col.getPattern().isEmpty() == false) ? col.getPattern() : numberFormatLocale)%>);
@@ -165,7 +162,7 @@
 				<%=conn.getName()%>.<%=col.getLabel()%> = <%=cid%>_value_<%=index%>;
 <%                  } else { %>
 	    	        try {
-						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.cimt.talendcomp.googleanalytics.Util.convertToDatatype(
+						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.googleanalytics.Util.convertToDatatype(
 								<%=cid%>_value_<%=index%>, 
 								"<%=col.getTalendType().substring(3)%>", 
 								<%=((col.getPattern() != null && col.getPattern().isEmpty() == false) ? col.getPattern() : numberFormatLocale)%>);
@@ -179,7 +176,7 @@
 					<%=conn.getName()%>.<%=col.getLabel()%> = <%=cid%>_value_<%=index%>;
 <%              } else { %>
 	    	        try {
-						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.cimt.talendcomp.googleanalytics.Util.convertToDatatype(
+						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.googleanalytics.Util.convertToDatatype(
 								<%=cid%>_value_<%=index%>, 
 								"<%=col.getTalendType().substring(3)%>", 
 								<%=((col.getPattern() != null && col.getPattern().isEmpty() == false) ? col.getPattern() : numberFormatLocale)%>);
