@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <COMPONENT>
-	<HEADER PLATEFORM="ALL" SERIAL="" VERSION="1.8" STATUS="PROD"
-		COMPATIBILITY="ALL" AUTHOR="cimt ag" RELEASE_DATE="20140918A"
+	<HEADER PLATEFORM="ALL" SERIAL="" VERSION="1.10" STATUS="PROD"
+		COMPATIBILITY="ALL" AUTHOR="Jan Lolling" RELEASE_DATE="20151218A"
 		STARTABLE="true">
 		<SIGNATURE />
 	</HEADER>
@@ -91,7 +91,7 @@
 	<CODEGENERATION>
 		<IMPORTS>
 			<IMPORT NAME="Google_AnalyticsMCF"
-				MODULE="jlo.talendcomp.gamfc-1.9-jar-with-dependencies.jar"
+				MODULE="jlo.talendcomp.gamfc-1.10-jar-with-dependencies.jar"
 				REQUIRED="true" />
 		</IMPORTS>
 	</CODEGENERATION>
