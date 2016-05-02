@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>TalendComp</groupId>
-  <artifactId>jlo.talendcomp.gamfc</artifactId>
+  <groupId>jlo.talendcomp.google</groupId>
+  <artifactId>jlo.talendcomp.google.analytics.mcf</artifactId>
   <name>GoogleAnalytics MCF Input Talend Component</name>
   <repositories>
     <repository>
@@ -27,7 +27,7 @@
     </dependency>
   </dependencies>
   <properties>
-    <project.api.version>v3-rev122-1.21.0</project.api.version>
+    <project.api.version>v3-rev127-1.21.0</project.api.version>
     <project.http.version>1.21.0</project.http.version>
     <project.oauth.version>1.21.0</project.oauth.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -58,5 +58,5 @@
       </plugin>
     </plugins>
   </build>
-  <version>1.10</version>
+  <version>1.11</version>
 </project>

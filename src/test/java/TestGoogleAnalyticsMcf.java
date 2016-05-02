@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput;
+import de.jlo.talendcomp.google.analytics.mcf.GoogleAnalyticsMCFInput;
 
 
 public class TestGoogleAnalyticsMcf {
