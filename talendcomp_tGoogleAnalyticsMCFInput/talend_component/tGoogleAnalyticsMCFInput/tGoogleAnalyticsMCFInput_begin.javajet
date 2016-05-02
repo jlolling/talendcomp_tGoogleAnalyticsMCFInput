@@ -49,11 +49,11 @@
 %>
     // start creating client
 	<% if ("true".equals(keepClient)) {%>
-	de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput <%=cid%> = de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput.getFromCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName);
+	de.jlo.talendcomp.google.analytics.mcf.GoogleAnalyticsMCFInput <%=cid%> = de.jlo.talendcomp.google.analytics.mcf.GoogleAnalyticsMCFInput.getFromCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName);
 	if (<%=cid%> == null) {
-		<%=cid%> = new de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput();
+		<%=cid%> = new de.jlo.talendcomp.google.analytics.mcf.GoogleAnalyticsMCFInput();
 	<% } else {%>
-	de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput <%=cid%> = new de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput();
+	de.jlo.talendcomp.google.analytics.mcf.GoogleAnalyticsMCFInput <%=cid%> = new de.jlo.talendcomp.google.analytics.mcf.GoogleAnalyticsMCFInput();
 	<% }%>
 	<% if (applicationName != null && applicationName.trim().isEmpty() == false) {%>
 		<%=cid%>.setApplicationName(<%=applicationName%>);
@@ -80,7 +80,7 @@
 		}
 		globalMap.put("<%=cid%>", <%=cid%>);
 	<% if ("true".equals(keepClient)) {%>
-		de.jlo.talendcomp.googleanalytics.GoogleAnalyticsMCFInput.putIntoCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName, <%=cid%>);
+		de.jlo.talendcomp.google.analytics.mcf.GoogleAnalyticsMCFInput.putIntoCache(<%=accountEmail%> + <%=keepClientName%> + "<%=cid%>" + jobName, <%=cid%>);
 	}
 	<% }%>
 	// setup query
@@ -148,7 +148,7 @@
 					<%=conn.getName()%>.<%=col.getLabel()%> = <%=cid%>_value_<%=index%>;
 <%              } else { %>
 	    	        try {
-						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.googleanalytics.Util.convertToDatatype(
+						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.google.analytics.mcf.Util.convertToDatatype(
 								<%=cid%>_value_<%=index%>, 
 								"<%=col.getTalendType().substring(3)%>", 
 								<%=((col.getPattern() != null && col.getPattern().isEmpty() == false) ? col.getPattern() : numberFormatLocale)%>);
@@ -162,7 +162,7 @@
 				<%=conn.getName()%>.<%=col.getLabel()%> = <%=cid%>_value_<%=index%>;
 <%                  } else { %>
 	    	        try {
-						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.googleanalytics.Util.convertToDatatype(
+						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.google.analytics.mcf.Util.convertToDatatype(
 								<%=cid%>_value_<%=index%>, 
 								"<%=col.getTalendType().substring(3)%>", 
 								<%=((col.getPattern() != null && col.getPattern().isEmpty() == false) ? col.getPattern() : numberFormatLocale)%>);
@@ -176,7 +176,7 @@
 					<%=conn.getName()%>.<%=col.getLabel()%> = <%=cid%>_value_<%=index%>;
 <%              } else { %>
 	    	        try {
-						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.googleanalytics.Util.convertToDatatype(
+						<%=conn.getName()%>.<%=col.getLabel()%> = (<%=javaClassName%>) de.jlo.talendcomp.google.analytics.mcf.Util.convertToDatatype(
 								<%=cid%>_value_<%=index%>, 
 								"<%=col.getTalendType().substring(3)%>", 
 								<%=((col.getPattern() != null && col.getPattern().isEmpty() == false) ? col.getPattern() : numberFormatLocale)%>);

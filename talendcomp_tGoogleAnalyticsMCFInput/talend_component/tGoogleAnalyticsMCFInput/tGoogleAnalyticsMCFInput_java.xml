@@ -91,7 +91,7 @@
 	<CODEGENERATION>
 		<IMPORTS>
 			<IMPORT NAME="Google_AnalyticsMCF"
-				MODULE="jlo.talendcomp.gamfc-1.10-jar-with-dependencies.jar"
+				MODULE="jlo.talendcomp.google.analytics.mcf-1.11-jar-with-dependencies.jar"
 				REQUIRED="true" />
 		</IMPORTS>
 	</CODEGENERATION>
